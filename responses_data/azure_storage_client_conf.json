@@ -1,0 +1,6 @@
+{
+  "automation": {
+    "connection_string": "DefaultEndpointsProtocol=https;AccountName=firewallblacklist;AccountKey=/y1ZUnFnTGh7pRyfZTjl/glwgtp1q5yIad3dZ/EAFvJ8l2hz7D3EsZnv2soOfiNCHrFHarBLgD5np6Kv92TTpQ==;EndpointSuffix=core.windows.net",
+    "container_name": "azure-storage"
+  }
+}

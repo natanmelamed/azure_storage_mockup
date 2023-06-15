@@ -1,0 +1,65 @@
+config:
+  - product: ms_sentinel
+    type: entities
+    name: ip
+    strong:
+      - Address
+      - $id
+    weak: [ ]
+    extra_prop: [ ]
+    related_extra_prop: [ ]
+  - product: ms_sentinel
+    type: entities
+    name: host
+    strong: [ ]
+    weak:
+      - HostName
+      - DnsDomain
+    extra_prop:
+      - $id
+    related_extra_prop: [ ]
+  - product: ms_sentinel
+    type: entities
+    name: account
+    strong: [ ]
+    weak: [ ]
+    extra_prop:
+      - $id
+    related_extra_prop:
+      - Name
+  - product: ms_sentinel
+    type: base_events
+    name: url
+    strong:
+      - ^src_
+    weak:
+      - ^category
+    extra_prop:
+      - url_custom_entity
+    related_extra_prop:
+      - message
+  - product: ms_sentinel
+    type: base_events
+    name: host
+    strong:
+      - time_generated
+      - customer_uri_s
+    weak:
+      - url_custom_entity
+      - indicator_score
+      - ip_custom_entity
+    extra_prop:
+      - source_ip
+    related_extra_prop:
+      - source_ip
+      - destination_ip
+  - product: ms_sentinel
+    type: base_events
+    name: account
+    strong:
+      - url_custom_entity
+      - destination_host_name_s
+    weak: [ ]
+    extra_prop: [ ]
+    related_extra_prop:
+      - request_method_s

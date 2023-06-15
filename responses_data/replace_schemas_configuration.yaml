@@ -1,0 +1,29 @@
+config:
+  - product: ms_sentinel
+    type: entities
+    name: ip
+    strong:
+      - Address
+      - $id
+    weak: []
+    extra_prop: []
+    related_extra_prop: []
+  - product: ms_sentinel
+    type: entities
+    name: host
+    strong: []
+    weak:
+      - HostName
+      - DnsDomain
+    extra_prop:
+      - $id
+    related_extra_prop: []
+  - product: ms_sentinel
+    type: entities
+    name: account
+    strong: []
+    weak: []
+    extra_prop:
+      - $id
+    related_extra_prop:
+      - Name
